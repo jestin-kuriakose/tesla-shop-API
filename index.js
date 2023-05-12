@@ -1,6 +1,11 @@
 const express = require("express")
 const app = express()
+require("dotenv").config()
 const cors = require("cors")
+const mongoose = require("mongoose")
+const connectDB = require("./config/dbConnect")
+
+connectDB()
 
 app.use(cors())
 app.use(express.json())
@@ -12,4 +17,9 @@ app.all('/', (req, res) => {
     res.send('Yo!')
 })
 
-app.listen(process.env.PORT || 3000)
+mongoose.connection.once('open', () => {
+    console.log("Connected to MongoDB")
+    app.listen(3001, ()=> console.log(`Server connected`))
+})
+
+
