@@ -28,6 +28,9 @@ const productSchema = new schema({
     },
     condition: {
         type: Array,
+    },
+    variation: {
+        type: Array
     }
 }, { timestamps: true })
 
