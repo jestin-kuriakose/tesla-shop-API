@@ -16,6 +16,7 @@ app.use('/login', require("./routes/login"))
 
 app.use('/api/v1', require("./routes/root"))
 app.use('/api/v1/products', require("./routes/api/products"))
+app.use('/api/v1/payment', require("./routes/api/stripe"))
 
 app.all('/', (req, res) => {
     console.log("Just got a request!")

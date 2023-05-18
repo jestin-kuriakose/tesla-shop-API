@@ -20,6 +20,9 @@ const productSchema = new schema({
         type: Number,
         required: true
     },
+    image: {
+        type: String
+    },
     color: {
         type: Array,
     },

@@ -3,7 +3,6 @@ const Product = require("../../model/Product")
 const getSKU = require("../../config/getSKU")
 const router = express.Router()
 
-
 // Get all Products
 router.get('/', async (req, res) => {
     try{
@@ -24,7 +23,6 @@ router.get('/:id', async (req, res) => {
     } catch(err) {
         res.status(500).json( {"message" : err.message} )
     }
-
 })
 
 // Add a Product
@@ -32,6 +30,7 @@ router.post('/', async(req, res) => {
     const color = req.body.color
     const storage = req.body.storage
     const condition = req.body.condition
+    const image = req.body.image
     let variation = []
     
     for(let i=0; i<color.length; i++) {
@@ -39,6 +38,8 @@ router.post('/', async(req, res) => {
             for(let k=0; k<condition.length; k++) {
                 variation.push({
                     sku: getSKU(req.body.sku, color[i], storage[j], condition[k]),
+                    image1: image,
+                    image2: image,                    
                     color: color[i],
                     storage: storage[j],
                     condition: condition[k],
