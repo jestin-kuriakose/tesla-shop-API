@@ -23,6 +23,10 @@ const productSchema = new schema({
     image: {
         type: String
     },
+    stock: {
+        type: Number,
+
+    },
     color: {
         type: Array,
     },
