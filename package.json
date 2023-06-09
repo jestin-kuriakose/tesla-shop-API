@@ -10,14 +10,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.348.0",
+    "@aws-sdk/s3-request-presigner": "^3.348.0",
+    "@pdfme/generator": "^1.2.2",
+    "aws-sdk": "^2.1393.0",
+    "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.5.0",
     "mongoose": "^7.1.1",
+    "nodemailer": "^6.9.3",
     "nodemon": "^2.0.22",
+    "pdf-lib": "^1.17.1",
     "stripe": "^12.5.0"
   }
 }

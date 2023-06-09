@@ -11,7 +11,7 @@ const verifyJWT = (req, res, next) => {
             if(err) return res.status(403).json({ "message": "Not Authorized" })
             req.email = decoded.UserInfo.email
             req.roles = decoded.UserInfo.roles
-            next()
+            next();
         }
     )
 }
