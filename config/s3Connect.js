@@ -4,15 +4,15 @@ const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 // Connecting to AWS S3
 const s3 = new S3Client({
     credentials: {
-        accessKeyId: "AKIAUUGT2KHQHSCLZCOJ",
-        secretAccessKey: "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"
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
     },
-    region: "ap-northeast-1"
+    region: process.env.AWS_REGION
 });
 
 const s3Connect = async (file) => {
     let url =''
-    const bucketName = 'tesla-shop'
+    const bucketName = process.env.AWS_S3_BUCKET_NAME
     const params = {
         Bucket: bucketName,
         Key: 'output1.pdf',
