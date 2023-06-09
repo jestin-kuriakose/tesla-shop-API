@@ -95,3 +95,5 @@ Sat Jun 10 2023 01:29:51 GMT+0400 (Gulf Standard Time)	OPTIONS	https://tesla-sho
 Sat Jun 10 2023 01:29:51 GMT+0400 (Gulf Standard Time)	GET	https://tesla-shop-admin.onrender.com	/api/v1/products
 Sat Jun 10 2023 01:44:39 GMT+0400 (Gulf Standard Time)	GET	http://localhost:5173	/api/v1/products
 Sat Jun 10 2023 01:44:40 GMT+0400 (Gulf Standard Time)	GET	http://localhost:5173	/api/v1/products
+Sat Jun 10 2023 02:06:44 GMT+0400 (Gulf Standard Time)	POST	undefined	/pdf
+Sat Jun 10 2023 02:08:36 GMT+0400 (Gulf Standard Time)	POST	undefined	/pdf
